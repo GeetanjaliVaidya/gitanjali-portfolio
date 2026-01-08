@@ -1,34 +1,85 @@
 
+:root {
+  --bg-dark: #0f172a;
+  --bg-light: #f8fafc;
+  --text-dark: #e5e7eb;
+  --text-light: #1e293b;
+  --card-dark: #1e293b;
+  --card-light: #ffffff;
+  --accent: #38bdf8;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background: #f8f8f8;
-    line-height: 1.6;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  transition: all 0.3s ease;
 }
-header {
-    background: #4b79a1;
-    color: white;
-    padding: 20px;
-    text-align: center;
+
+body.dark {
+  background: var(--bg-dark);
+  color: var(--text-dark);
 }
+
+body.light {
+  background: var(--bg-light);
+  color: var(--text-light);
+}
+
+.header {
+  padding: 30px;
+  text-align: center;
+  position: relative;
+}
+
+.profile img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.links a {
+  margin: 0 8px;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.btn {
+  border: 1px solid var(--accent);
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+
+#toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
 section {
-    margin: 20px;
-    padding: 20px;
-    background: white;
-    border-radius: 8px;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
 }
-h2 {
-    color: #333;
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
 }
-ul {
-    padding-left: 20px;
+
+.card {
+  padding: 20px;
+  border-radius: 10px;
+  background: var(--card-dark);
 }
-.job {
-    margin-bottom: 20px;
+
+body.light .card {
+  background: var(--card-light);
 }
+
 footer {
-    background: #4b79a1;
-    color: white;
-    text-align: center;
-    padding: 10px;
+  text-align: center;
+  padding: 20px;
 }
